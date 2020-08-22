@@ -30,6 +30,7 @@ Dependencies listed in requirements.txt.
 
 Getting Started 
 
+- Authentication link: https://dev-p8l4wm2k.eu.auth0.com/authorize?audience=CadoptAPI&response_type=token&client_id=fRLnTPdJjEubLIEdJFz3Rp2gbbGpvEMt&redirect_uri=https://cadoptapp.herokuapp.com/cats
 - URL to connect globally: the backend is hosted  at the https://cadoptapp.herokuapp.com/
 - URL to connect locally: the backend is hosted at the default http://127.0.0.1:5000/ or http://localhost:5000/ on local machine.
 - Authentication: for connecting API authentication is required for curator and moderator roles
@@ -187,7 +188,6 @@ Endpoints
 ```
 - PATCH '/cats/<int:curators_id>'
     * Allows to update cat record based on category ID.
-    * 
     * Sample: curl cadoptapp.herokuapp.com/cats/1 -X PATCH -H "Content-Type: application/json" -d '{"gender": "girl"}'
                 curl cadoptapp.herokuapp.com/cats/1 -X PATCH -H "Content-Type: application/json" -d '{"city": "Oslo"}'
                 curl cadoptapp.herokuapp.com/cats/1 -X PATCH -H "Content-Type: application/json" -d '{"status": "Adopted"}'
