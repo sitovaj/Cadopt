@@ -1,0 +1,1293 @@
+{
+	"info": {
+		"_postman_id": "7a7340ca-9f64-420f-a6d6-508f8e6058b6",
+		"name": "Cadopt project testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "moderator",
+			"item": [
+				{
+					"name": "Post Curator",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "190ed356-4abf-49e9-873c-e75a407a22a2",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n      \"email\": \"sos@helpcats\", \r\n      \"facebook\": \"facebook.com/helpcats\", \r\n      \"legal_number\": \"LV4000789955\", \r\n      \"name\": \"Help Cats\", \r\n      \"phone\": \"37378954123\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://cadoptapp.herokuapp.com/curators",
+							"protocol": "https",
+							"host": [
+								"cadoptapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"curators"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Curator Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "861c47b7-50c3-4e33-8b2c-582d91edf302",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n      \"email\": \"sos@helpcats\", \r\n      \"facebook\": \"facebook.com/helpcats\", \r\n      \"legal_number\": \"LV4000789955\", \r\n      \"name\": \"Help Cats\", \r\n      \"phone\": \"37378954123\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://cadoptapp.herokuapp.com/curators",
+							"protocol": "https",
+							"host": [
+								"cadoptapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"curators"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Cat",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9c7a41b1-2918-4c7c-99b0-987249c6c149",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"birthday\": \"20200518\", \r\n      \"city\": \"Krakow\", \r\n      \"color\": \"tortoise\", \r\n      \"curator_id\": 2, \r\n      \"gender\": \"girl\", \r\n      \"image\": \"https://i.pinimg.com/originals/b7/66/70/b76670c8ede75bea6cded452a790d2b8.jpg\", \r\n      \"name\": \"Miss\", \r\n      \"status\": \"Seeking for home\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://cadoptapp.herokuapp.com/cats",
+							"protocol": "https",
+							"host": [
+								"cadoptapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Cat Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "741230ca-520c-41d5-81e4-ddcc9243bb19",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"birthday\": \"20200518\", \r\n      \"city\": \"Krakow\", \r\n      \"color\": \"tortoise\", \r\n      \"curator_id\": 2, \r\n      \"gender\": \"girl\", \r\n      \"image\": \"https://i.pinimg.com/originals/b7/66/70/b76670c8ede75bea6cded452a790d2b8.jpg\", \r\n      \"name\": \"Miss\", \r\n      \"status\": \"Seeking for home\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://cadoptapp.herokuapp.com/cats",
+							"protocol": "https",
+							"host": [
+								"cadoptapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patch Cat",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e02fcca9-f03b-4e42-affb-8fe430ed0d09",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"gender\": \"girl\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://cadoptapp.herokuapp.com/cats/2",
+							"protocol": "https",
+							"host": [
+								"cadoptapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cats",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Cat list",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ada50924-8d27-41be-8fe8-c53562bd8831",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://cadoptapp.herokuapp.com/cats",
+							"protocol": "https",
+							"host": [
+								"cadoptapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Curators list",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f3d8d007-4af8-4b85-94d5-25c3bda10446",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://cadoptapp.herokuapp.com/curators",
+							"protocol": "https",
+							"host": [
+								"cadoptapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"curators"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Cat details",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e7053257-971c-40c7-8d59-9aaeeda67f23",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://cadoptapp.herokuapp.com/cats/1",
+							"protocol": "https",
+							"host": [
+								"cadoptapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cats",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Curator details",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3c9d967b-738b-4313-88f0-17d3c31b02e8",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://cadoptapp.herokuapp.com/curators",
+							"protocol": "https",
+							"host": [
+								"cadoptapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"curators"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Curator",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "788002d4-afeb-407f-b5c6-d4a99e6ebb1d",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://cadoptapp.herokuapp.com/curators/1",
+							"protocol": "https",
+							"host": [
+								"cadoptapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"curators",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Cat record",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "05651623-609b-4f72-988e-bcc9ac9d5b8a",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://cadoptapp.herokuapp.com/cats/2",
+							"protocol": "https",
+							"host": [
+								"cadoptapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cats",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlBVOU5wcDczQXlBZmFDRVBwb2F0eiJ9.eyJpc3MiOiJodHRwczovL2Rldi1wOGw0d20yay5ldS5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWVmNzAxMzI0ODIyYTcwMDFhMzgzN2I5IiwiYXVkIjoiQ2Fkb3B0QVBJIiwiaWF0IjoxNTk4MDk5MzcwLCJleHAiOjE1OTgxODU3NjksImF6cCI6ImZSTG5UUGRKakV1YkxJRWRKRnozUnAyZ2JiR3B2RU10Iiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6Y2F0cyIsImRlbGV0ZTpjdXJhdG9ycyIsInBhdGNoOmNhdHMiLCJwb3N0OmNhdHMiLCJwb3N0OmN1cmF0b3JzIl19.Cp2TS3kjpcalxG0b_nmjT2cS5bbLYnaVafYhsfLhDKJD01iBs7IU69Sf-O8p8_9VERl3MFxUMcVSWHiXDAqPHpkV8-iNb1_0OoiYSNX4D9OdxVZJ7hhJjgzBKUWo4RQntOkzeAfw_k3ogc8P7sWap5uxrUVBMcHYHEnqpp7iXyAEwD-gCsBTHSqYdBoduyfICoVoTUD5rzCGw8Ka5X6VU5y1jvY_syYp-9nTIdt6oDgShPbgpnnTY6tIs6iAy7s0L1vXqpDvtsrSX5amgfl5cR-fmUGuQfwiACMQHRLpRQwUGZJg07reGkt0i9O3tb1OfKG8Udwj8UrNkNGcZMKjWQ",
+						"type": "string"
+					}
+				]
+			},
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "curator",
+			"item": [
+				{
+					"name": "Post Curator",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "226ff4c7-4216-44a0-b28e-5fac83279f56",
+								"exec": [
+									"pm.test(\"Status code is 500\", function () {\r",
+									"    pm.response.to.have.status(500);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n      \"email\": \"sos@helpcats\", \r\n      \"facebook\": \"facebook.com/helpcats\", \r\n      \"legal_number\": \"LV4000789955\", \r\n      \"name\": \"Help Cats\", \r\n      \"phone\": \"37378954123\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://cadoptapp.herokuapp.com/curators",
+							"protocol": "https",
+							"host": [
+								"cadoptapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"curators"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Cat",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ba01887e-58a8-4b39-be22-2e97ddd47528",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"birthday\": \"20200518\", \r\n      \"city\": \"Krakow\", \r\n      \"color\": \"tortoise\", \r\n      \"curator_id\": 2, \r\n      \"gender\": \"girl\", \r\n      \"image\": \"https://i.pinimg.com/originals/b7/66/70/b76670c8ede75bea6cded452a790d2b8.jpg\", \r\n      \"name\": \"Miss\", \r\n      \"status\": \"Seeking for home\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://cadoptapp.herokuapp.com/cats",
+							"protocol": "https",
+							"host": [
+								"cadoptapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Cat Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8c4a1608-b49b-4d6e-8a9c-55a454d4c768",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"birthday\": \"20200518\", \r\n      \"city\": \"Krakow\", \r\n      \"color\": \"tortoise\", \r\n      \"curator_id\": 2, \r\n      \"gender\": \"girl\", \r\n      \"image\": \"https://i.pinimg.com/originals/b7/66/70/b76670c8ede75bea6cded452a790d2b8.jpg\", \r\n      \"name\": \"Miss\", \r\n      \"status\": \"Seeking for home\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://cadoptapp.herokuapp.com/cats",
+							"protocol": "https",
+							"host": [
+								"cadoptapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patch Cat",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bd733655-809d-42f1-9212-e4eb2a136f7f",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"gender\": \"girl\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://cadoptapp.herokuapp.com/cats/1",
+							"protocol": "https",
+							"host": [
+								"cadoptapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cats",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Cat list",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9b4540a4-5dc6-4e12-88f5-8337ea41a09a",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://cadoptapp.herokuapp.com/cats",
+							"protocol": "https",
+							"host": [
+								"cadoptapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Curators list",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2fd3a5cf-5a71-4035-8f6f-9af4a14fb0f8",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://cadoptapp.herokuapp.com/curators",
+							"protocol": "https",
+							"host": [
+								"cadoptapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"curators"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Curator details",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5bb19cba-8c49-4de9-97bd-0e1624f2a8c0",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://cadoptapp.herokuapp.com/curators",
+							"protocol": "https",
+							"host": [
+								"cadoptapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"curators"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Cat details",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2cb4d349-f5e5-443b-953a-cb673c3b85f0",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://cadoptapp.herokuapp.com/cats/1",
+							"protocol": "https",
+							"host": [
+								"cadoptapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cats",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Cat record",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5853cc95-0a21-4197-9f5a-85fe5be467dc",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://cadoptapp.herokuapp.com/cats/3",
+							"protocol": "https",
+							"host": [
+								"cadoptapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cats",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlBVOU5wcDczQXlBZmFDRVBwb2F0eiJ9.eyJpc3MiOiJodHRwczovL2Rldi1wOGw0d20yay5ldS5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWVkNTYzOGJmYjM4YTYwYjk2Njg2MTQxIiwiYXVkIjoiQ2Fkb3B0QVBJIiwiaWF0IjoxNTk4MDk3Nzc2LCJleHAiOjE1OTgxODQxNzUsImF6cCI6ImZSTG5UUGRKakV1YkxJRWRKRnozUnAyZ2JiR3B2RU10Iiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6Y2F0cyIsInBhdGNoOmNhdHMiLCJwb3N0OmNhdHMiXX0.eltekZ-r8P69VgR0R-MBZurR8Kwni1-j9VZJOX-PY1t8oBHuscrxIF2IXWCILWIG_xmbfy8bCwv_crfLSxjTvx36e_5wMKcNrYMLfKbdTHa_lZCR3noYodTWaCOqyDS6trhHVNbx8YUQ18eCLev0N_SYXe_xpmUHrF9i946Lm77aPI71vbDW07Vla150q4r0lqeEfruJyt5nWiIMBp2rB1TWuCh3wtc29t_wRWvve0XEL9WWZOHvVuuEbH9ux8Frjfy7XfZ-0h3DYLxTDBhQJ-ouQVYwW4_G0B5-cIuw2bXWG0XTJ7Og9FrRHwNZsj4YT44IA-gsTfo2N7SLqUqJXQ",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "85e5c6b3-67b1-4aea-8f63-e86ac7ec34dd",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "17f65fc8-2d5b-4005-901e-d91cee5ee150",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "public",
+			"item": [
+				{
+					"name": "Get Cat details",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "41fcbc98-23e7-4a4e-974a-d1c5eadc99d0",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://cadoptapp.herokuapp.com/cats/1",
+							"protocol": "https",
+							"host": [
+								"cadoptapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cats",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Cat details Unsuccessful",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8b043338-e802-41b9-b525-b6b76406dfb6",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://cadoptapp.herokuapp.com/cats/177",
+							"protocol": "https",
+							"host": [
+								"cadoptapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cats",
+								"177"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Cat list",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e9d20aa9-4b37-44f9-8e55-a97f7ccc4861",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://cadoptapp.herokuapp.com/cats",
+							"protocol": "https",
+							"host": [
+								"cadoptapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Curator details",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d7f5ff19-532b-48e4-a32c-1082a9bd7cd6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://cadoptapp.herokuapp.com/curators",
+							"protocol": "https",
+							"host": [
+								"cadoptapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"curators"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Curators list",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "087220e6-e503-4132-9ae0-855de19520fe",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://cadoptapp.herokuapp.com/curators",
+							"protocol": "https",
+							"host": [
+								"cadoptapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"curators"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Cat",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d279db7f-ebf6-4c44-9f9f-c43496969993",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"birthday\": \"20200518\", \r\n      \"city\": \"Krakow\", \r\n      \"color\": \"tortoise\", \r\n      \"curator_id\": 2, \r\n      \"gender\": \"girl\", \r\n      \"image\": \"https://i.pinimg.com/originals/b7/66/70/b76670c8ede75bea6cded452a790d2b8.jpg\", \r\n      \"name\": \"Miss\", \r\n      \"status\": \"Seeking for home\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://cadoptapp.herokuapp.com/cats",
+							"protocol": "https",
+							"host": [
+								"cadoptapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patch Cat",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "52d452b8-7bbf-4a82-9cb4-3da298393177",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"gender\": \"girl\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://cadoptapp.herokuapp.com/cats/2",
+							"protocol": "https",
+							"host": [
+								"cadoptapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cats",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Curator",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6369205c-76b9-43c7-aa5f-38c65f236dcf",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n      \"email\": \"sos@helpcats\", \r\n      \"facebook\": \"facebook.com/helpcats\", \r\n      \"legal_number\": \"LV4000789955\", \r\n      \"name\": \"Help Cats\", \r\n      \"phone\": \"37378954123\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://cadoptapp.herokuapp.com/curators",
+							"protocol": "https",
+							"host": [
+								"cadoptapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"curators"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Cat record",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae5586dc-c6bb-4e04-908c-492ff1a393d8",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://cadoptapp.herokuapp.com/cats/2",
+							"protocol": "https",
+							"host": [
+								"cadoptapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cats",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Curator",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "cede1c60-a0cf-4658-b6d4-91d08a4ec155",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://cadoptapp.herokuapp.com/curators/3",
+							"protocol": "https",
+							"host": [
+								"cadoptapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"curators",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Cat details Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "afaf8892-4640-4b0a-99a8-eb21e70f74a6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://cadoptapp.herokuapp.com/cats/1",
+							"protocol": "https",
+							"host": [
+								"cadoptapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cats",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "noauth"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c4919ee7-e710-467b-ba0a-2e4fa58c6378",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "1e66feb2-0fdb-4f2d-8989-a1fdaff21b5f",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "59096da6-db00-4b40-b702-c553146e7bb3",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "6e42e431-66aa-4f94-ae69-76cb540535d1",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
