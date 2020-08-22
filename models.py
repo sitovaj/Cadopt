@@ -4,9 +4,11 @@ from sqlalchemy import Column, String, Integer, DateTime, create_engine
 from flask_sqlalchemy import SQLAlchemy
 import json
 
-database_name = "cadopt"
-database_path = "postgres://{}:{}@{}/{}".format(
-    'student', 'student', 'localhost:5432', database_name)
+database_path = os.environ.get('DATABASE_URL')
+if not database_path:
+    database_name = "cadopt"
+    database_path = "postgres://{}:{}@{}/{}".format(
+        'student', 'student', 'localhost:5432', database_name)
 
 db = SQLAlchemy()
 
@@ -17,7 +19,7 @@ setup_db(app)
 
 
 def setup_db(app, database_path=database_path):
-    app.config["SQLALCHEMY_DATABASE_URI"] = 'postgres://postgres@localhost:5432/' #database_path
+    # app.config["SQLALCHEMY_DATABASE_URI"] = 'postgres://postgres@localhost:5432/' #database_path
     app.config["DATABASE_URL"] = 'postgres://ifehwiaolmadrn:139c726550fa602ef4fd689bcfb93a83d07d468a660fbd3a6778dc58d32f6ee8@ec2-34-238-26-109.compute-1.amazonaws.com:5432/dc450favsn3hok'
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
     db.app = app
